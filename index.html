@@ -16,4 +16,43 @@
       <a href="admin.html" id="adminLink" style="display:none;">Admin</a>
       <a href="#" id="logoutLink" style="display:none;" onclick="logout()">Logout</a>
     </div>
-    <button class="menu-toggle" onclick="
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Welcome to MySite</h1>
+      <p>Simple login, register & admin system. Everything works remotely.</p>
+      <div class="hero-buttons" id="heroButtons">
+        <a href="login.html" class="btn btn-primary">Login</a>
+        <a href="register.html" class="btn btn-secondary">Register</a>
+      </div>
+      <div id="welcomeUser" style="display:none;" class="welcome-box">
+        <p>You are logged in as <strong id="currentUser"></strong></p>
+        <a href="admin.html" class="btn btn-primary" id="goAdminBtn" style="display:none;">Go to Admin</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <h3>Login</h3>
+        <p>Access your account securely from any device.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Register</h3>
+        <p>Create a new account in seconds.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Admin Panel</h3>
+        <p>Manage users (visible only to admin).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hosted on GitHub Pages • Mobile friendly</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
