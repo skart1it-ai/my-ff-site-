@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Admin Panel - MySite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">MySite</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="login.html" id="loginLink">Login</a>
+      <a href="register.html" id="registerLink">Register</a>
+      <a href="admin.html" class="active" id="adminLink">Admin</a>
+      <a href="#" id="logoutLink" onclick="logout()">Logout</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <main class="container">
+    <div id="adminGate" class="form-card">
+      <h2>Admin Access</h2>
+      <p class="note">Enter the admin password to continue.<br>Default: <strong>admin123</strong></p>
+      <form onsubmit="checkAdminPassword(event)">
+        <div class="form-group">
+          <label for="adminPass">Admin Password</label>
+          <input type="password" id="adminPass" required placeholder="Enter admin password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Enter Admin</button>
+      </form>
+      <div id="adminGateMessage" class="message"></div>
+    </div>
+
+    <div id="adminPanel" style="display:none;">
+      <div class="admin-header">
+        <h2>Admin Panel</h2>
+        <p>Logged in as: <strong id="adminUserDisplay"></strong></p>
+      </div>
+
+      <div class="admin-stats">
+        <div class="stat-card">
+          <h3 id="totalUsers">0</
